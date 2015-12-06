@@ -9,19 +9,30 @@ public class AppTest {
 	String str1 = "Amor";
 	String str2 = "Amar";
 	
+        /**
+         *Clausula @Before, crea un mensaje que será ejecutado antes de cada uno de los test
+         */
+        
 	@Before
 	public void setUp()
 	{
 		System.out.print("Comienza el test: ");
 	}
 
-	
+	/**
+         * Prueba para saber si crea bien el objeto del objeto.
+         */
+        
 	@org.junit.Test
 	public void TestCreaObjeto() {
 		System.out.println("Creación correcta Objeto");
 		assertNotNull("EL Objeto ha sido creado Correctamente",new App());
 	}
 	
+        /**
+         *  Prueba para ver si el algoritmo reconoce dos valores diferentes
+         */
+        
 	@org.junit.Test
 	public void TestSonDistintos() {
 		
@@ -30,6 +41,10 @@ public class AppTest {
 		assertEquals("\""+str1+"\" y \""+str2+"\" se diferencian en: ", 1, 
 					App.computeLevenshteinDistance(str1,str2));
 	}
+        
+        /**
+         *  Prueba para ver si el algoritmo reconoce dos valores iguales
+         */
 	
 	@org.junit.Test
 	public void TestSonIguales() {
