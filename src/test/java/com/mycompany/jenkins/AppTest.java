@@ -6,8 +6,8 @@ import org.junit.*;
 
 public class AppTest {
 	
-	String str1 = "Amor";
-	String str2 = "Amar";
+	String str1 = "Vaca";
+	String str2 = "Baca";
 	
         /**
          *Clausula @Before, crea un mensaje que será ejecutado antes de cada uno de los test
